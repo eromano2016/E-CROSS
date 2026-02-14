@@ -21,7 +21,7 @@ charging_station = {
 }
 
 # === LOAD TRIP DATA ===
-trip = pd.read_csv(f'{file_path}trip_all_included.csv')
+trip = pd.read_csv(f'{file_path}trip_OD_matrix.csv')
 max_trips =len(trip)
 
 # Load electricity prices for France and Switzerland
@@ -43,7 +43,7 @@ for i, (trip_idx, trip_row) in enumerate(trip.head(max_trips).iterrows()):
     trajet_km = trip_row['distance']
     depart = trip_row['local_admin_unit_id_from']
     arrival = trip_row['local_admin_unit_id_to']
-    nb_cars = trip_row['nb_vehicles_adj']
+    nb_cars = trip_row['nb_vehicles']
     SoC_initial = SoC_initial_default
     day_summaries = []  # reset per trip
     charge_load =[]
