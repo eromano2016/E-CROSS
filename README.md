@@ -31,7 +31,7 @@ Two steps are required to run the optimisation code.
     | `local_admin_unit_id_from`     | Origin ID (INSEE number) |
     | `local_admin_unit_id_to`       | Destination ID (BSF number) |
     | `distance`                     | Distance between origin and destination in km and needs to be calculated (e.g. using Google API) |
-    | `nb_vehicles_adj`              | Number of electric vehicles |
+    | `nb_vehicles`              | Number of electric vehicles |
 
 ## Links to all used datasets
 Different public data sources were collected and used for modelling the OD-matrix in this publication and are listed below:
